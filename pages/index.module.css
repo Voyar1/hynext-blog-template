@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 2rem;
+  position: relative;
 }
 
 .main__layout__posts {
@@ -14,5 +15,18 @@
 
 .main__layout__sidebar__container {
   position: sticky;
-  top: 10%;
+  top: 11rem;
+}
+
+/* ============Media queries medium devices=============== */
+
+@media screen and (max-width: 1024px) {
+  .main__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============Media queries small devices=============== */
+
+@media screen and (max-width: 600px) {
 }
