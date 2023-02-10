@@ -29,7 +29,7 @@ body {
   --color-primary: #85cdfd;
   --color-primary-variant: #defcf9;
   --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6);
+  --color-light: rgba(112, 111, 111, 0.75);
 
   --transition: all 400ms ease;
 

@@ -47,7 +47,7 @@ export default function Home() {
         </div>
         <div className={styles.main__layout__sidebar}>
           <div className={styles.main__layout__sidebar__container}>
-            <PostWidget />
+            <PostWidget posts={DUMMY_POSTS} />
             <CategoriesWidget />
           </div>
         </div>
