@@ -16,7 +16,6 @@
 }
 
 .posts__widget__content__image {
-  overflow: hidden;
   width: 4rem;
 }
 
@@ -45,4 +44,13 @@
 .content__info__date {
   font-size: 1rem;
   color: var(--color-light);
+}
+
+.content__info__title {
+  color: black;
+  transition: var(--transition);
+}
+
+.content__info__title:hover {
+  color: var(--color-primary);
 }

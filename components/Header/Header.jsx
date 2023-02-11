@@ -31,7 +31,10 @@ const Header = () => {
             {RANDOM_DATA_CAT.map((cat) => {
               return (
                 <li key={cat.slug} className={styles.navigation__item}>
-                  <Link href={cat.slug} className={styles.navigation__link}>
+                  <Link
+                    href={`/category/${cat.slug}`}
+                    className={styles.navigation__link}
+                  >
                     {cat.name}
                   </Link>
                 </li>

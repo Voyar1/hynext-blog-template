@@ -14,7 +14,14 @@
   margin-bottom: 1rem;
 }
 
-.categories__widget__title span {
+.content__title {
+  color: black;
+  transition: var(--transition);
+  font-size: 1.1rem;
+}
+
+.content__title:hover {
+  color: var(--color-primary);
 }
 
 .categories__widget__content {

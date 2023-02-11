@@ -2,35 +2,9 @@ import Head from "next/head";
 import styles from "./index.module.css";
 import { PostCard, PostWidget, CategoriesWidget } from "@/components";
 import moment from "moment";
+import { getPosts } from "@/services";
 
-const DUMMY_POSTS = [
-  {
-    title: "React Testing",
-    img: "/react-img.jpg",
-    author: "Voyar",
-    date: moment().format("MMM Do YYYY"),
-    excerpt:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugiat laborum quos voluptas modi. Alias omnis facere voluptatibus tenetur quae?",
-  },
-  {
-    title: "React Testing2",
-    img: "/react-img.jpg",
-    author: "Voyar",
-    date: moment().format("MMM Do YYYY"),
-    excerpt:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugiat laborum quos voluptas modi. Alias omnis facere voluptatibus tenetur quae?",
-  },
-  {
-    title: "React Testing3",
-    img: "/react-img.jpg",
-    author: "Voyar",
-    date: moment().format("MMM Do YYYY"),
-    excerpt:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam fugiat laborum quos voluptas modi. Alias omnis facere voluptatibus tenetur quae?",
-  },
-];
-
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <>
       <Head>
@@ -41,17 +15,25 @@ export default function Home() {
       </Head>
       <div className={`${styles.main__layout} container`}>
         <div className={styles.main__layout__posts}>
-          {DUMMY_POSTS.map((post) => {
-            return <PostCard post={post} key={post.title} />;
+          {posts.map((post) => {
+            return <PostCard post={post} key={post.slug} />;
           })}
         </div>
         <div className={styles.main__layout__sidebar}>
           <div className={styles.main__layout__sidebar__container}>
-            <PostWidget posts={DUMMY_POSTS} />
+            <PostWidget />
             <CategoriesWidget />
           </div>
         </div>
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+
+  return {
+    props: { posts },
+  };
 }
