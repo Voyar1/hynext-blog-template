@@ -1,0 +1,29 @@
+.post__layout {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 2rem;
+  position: relative;
+}
+
+.post__layout__content {
+  grid-column: span 8 / span 8;
+}
+
+.post__layout__sidebar {
+  grid-column: span 4 / span 4;
+}
+
+.post__layout__sidebar__container {
+  position: sticky;
+  top: 11rem;
+}
+
+/* ============Media queries medium devices=============== */
+
+@media screen and (max-width: 1024px) {
+  .post__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============Media queries small devices=============== */

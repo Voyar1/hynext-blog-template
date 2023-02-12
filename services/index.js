@@ -125,3 +125,35 @@ export const getCategoryPost = async (slug) => {
   const result = await request(graphqlAPI, query, { slug });
   return result.postsConnection.edges;
 };
+
+export const getPostDetails = async (slug) => {
+  const query = gql`
+    query GetPostDetails($slug: String!) {
+      post(where: { slug: $slug }) {
+        author {
+          bio
+          name
+          id
+        }
+        createdAt
+        slug
+        title
+        excerpt
+        featuredImage {
+          url
+        }
+        categories {
+          name
+          slug
+        }
+        content {
+          raw
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+
+  return result.post;
+};

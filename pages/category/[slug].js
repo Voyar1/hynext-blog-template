@@ -12,20 +12,18 @@ const Category = ({ posts }) => {
     return <Loader />;
   }
   return (
-    <>
-      <div className={`${styles.categories__layout} container`}>
-        <div className={styles.categories__layout__posts}>
-          {posts.map((post) => {
-            return <PostCard post={post.node} key={post.node.slug} />;
-          })}
-        </div>
-        <div className={styles.categories__layout__sidebar}>
-          <div className={styles.categories__layout__sidebar__container}>
-            <CategoriesWidget />
-          </div>
+    <div className={`${styles.categories__layout} container`}>
+      <div className={styles.categories__layout__posts}>
+        {posts.map((post) => {
+          return <PostCard post={post.node} key={post.node.slug} />;
+        })}
+      </div>
+      <div className={styles.categories__layout__sidebar}>
+        <div className={styles.categories__layout__sidebar__container}>
+          <CategoriesWidget />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
