@@ -1,0 +1,49 @@
+.loader__container {
+  text-align: center;
+}
+
+.loader {
+  align-items: center;
+  padding: 1rem 6rem;
+  border-width: 1px;
+  border: transparent;
+  line-height: 1.5rem;
+  font-weight: bold;
+  border-radius: 0.375rem;
+  color: white;
+  background-color: var(--color-bg-variant);
+  transition: 1s ease-in-out;
+}
+
+.loader:hover {
+  background-color: rgb(244 63 94);
+}
+
+.loader:focus {
+  background-color: rgb(190 18 60);
+}
+
+.loader:active {
+  background-color: rgb(190 18 60);
+}
+
+.animation {
+  animation: spin 1s linear infinite;
+}
+
+.circle {
+  opacity: 0.25;
+}
+
+.path {
+  opacity: 0.75;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

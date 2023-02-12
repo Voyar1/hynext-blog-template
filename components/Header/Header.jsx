@@ -1,23 +1,15 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./header.module.css";
-
-const RANDOM_DATA_CAT = [
-  {
-    name: "React",
-    slug: "react",
-  },
-  {
-    name: "Next",
-    slug: "next",
-  },
-  {
-    name: "Vanilla Js",
-    slug: "vanilla-js",
-  },
-];
+import { getCategories } from "@/services";
 
 const Header = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    getCategories().then((newCategories) => setCategories(newCategories));
+  }, []);
+
   return (
     <header className={styles.header}>
       <div className={styles.header__container}>
@@ -28,7 +20,7 @@ const Header = () => {
         </div>
         <nav className={styles.navigation}>
           <ul className={styles.navigation__list}>
-            {RANDOM_DATA_CAT.map((cat) => {
+            {categories.map((cat) => {
               return (
                 <li key={cat.slug} className={styles.navigation__item}>
                   <Link
