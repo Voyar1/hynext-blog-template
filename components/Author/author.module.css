@@ -1,0 +1,24 @@
+.authorCard {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 3rem;
+  position: relative;
+  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.445);
+}
+
+.authorCardIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 5rem;
+}
+
+.authorName {
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}

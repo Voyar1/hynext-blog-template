@@ -2,13 +2,14 @@ import { getPosts } from "@/services";
 import React from "react";
 import { getPostDetails } from "@/services";
 import styles from "./post.module.css";
-import { CategoriesWidget, PostDetail } from "@/components";
+import { CategoriesWidget, PostDetail, Author } from "@/components";
 
 const PostDetails = ({ post }) => {
   return (
     <div className={`${styles.post__layout} container`}>
       <div className={styles.post__layout__content}>
         <PostDetail post={post} />
+        <Author author={post.author} />
       </div>
       <div className={styles.post__layout__sidebar}>
         <div className={styles.post__layout__sidebar__container}>
