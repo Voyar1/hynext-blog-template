@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "./postwidget.module.css";
-import { getRecentPosts } from "@/services";
+import { getRecentPosts, getRelatedPosts } from "@/services";
 import moment from "moment";
 import Link from "next/link";
 
 const PostWidget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
-
   useEffect(() => {
     if (slug) {
       getRelatedPosts(categories, slug).then((posts) => setRelatedPosts(posts));
@@ -18,7 +17,7 @@ const PostWidget = ({ categories, slug }) => {
   return (
     <div className={styles.posts__widget}>
       <div className={styles.posts__widget__title}>
-        <span>Recent Posts</span>
+        <span>{slug ? "Related Posts" : "Recent Posts"}</span>
       </div>
       <div className={styles.posts__widget__content}>
         {relatedPosts.map((post) => {

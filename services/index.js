@@ -75,7 +75,7 @@ export const getRelatedPosts = async (categories, slug) => {
     }
   `;
 
-  const result = await request(graphqlAPI, query);
+  const result = await request(graphqlAPI, query, { categories, slug });
 
   return result.posts;
 };
