@@ -41,3 +41,27 @@
   align-items: center;
   color: var(--color-primary);
 }
+
+.headingTwo {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.headingThree {
+  font-size: 1.4rem;
+  margin-bottom: 1.3rem;
+}
+
+.headingFour {
+  font-size: 1.3rem;
+  margin-bottom: 1.3rem;
+}
+
+.parapgraphs {
+  padding-bottom: 1rem;
+  text-align: justify;
+}
+
+.postLink:hover {
+  color: gray;
+}

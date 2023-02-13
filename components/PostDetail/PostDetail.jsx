@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./postdetail.module.css";
 import moment from "moment/moment";
 import { BsCalendarDate } from "react-icons/bs";
+import Link from "next/link";
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -19,12 +20,31 @@ const PostDetail = ({ post }) => {
       if (obj.underline) {
         modifiedText = <u key={index}>{text}</u>;
       }
+      if (obj.href) {
+        modifiedText = (
+          <Link
+            href={obj.href}
+            className={styles.postLink}
+            target={obj.openInNewTab ? "_blank" : null}
+          >
+            {obj.children[0].text}
+          </Link>
+        );
+      }
     }
 
     switch (type) {
       case "heading-three":
         return (
-          <h3 key={index} className="text-xl font-semibold mb-4">
+          <h3 key={index} className={styles.headingThree}>
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h3>
+        );
+      case "heading-two":
+        return (
+          <h3 key={index} className={styles.headingTwo}>
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
@@ -32,7 +52,7 @@ const PostDetail = ({ post }) => {
         );
       case "paragraph":
         return (
-          <p key={index} className="mb-8">
+          <p key={index} className={styles.parapgraphs}>
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
@@ -40,7 +60,7 @@ const PostDetail = ({ post }) => {
         );
       case "heading-four":
         return (
-          <h4 key={index} className="text-md font-semibold mb-4">
+          <h4 key={index} className={styles.headingFour}>
             {modifiedText.map((item, i) => (
               <React.Fragment key={i}>{item}</React.Fragment>
             ))}
