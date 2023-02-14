@@ -1,0 +1,112 @@
+.commentForm {
+  background: var(--color-white);
+  padding: 2rem 1.4rem;
+  border-radius: 1rem;
+  margin-bottom: 5rem;
+  color: black;
+}
+
+.commentFormTitle {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.452);
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.textareaContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.textArea {
+  width: 100%;
+  padding: 1rem 0.6rem;
+  border-radius: 0.6rem;
+  outline: 2px solid transparent;
+  color: black;
+  outline-offset: 2px;
+  resize: vertical;
+  font-size: 1.2rem;
+  border: none;
+  background: rgba(151, 151, 151, 0.123);
+  min-height: 10rem;
+}
+
+.textArea:focus {
+  outline: 2px solid rgba(151, 151, 151, 0.486);
+}
+
+.inputsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.inputsContainer input {
+  width: 100%;
+  padding: 1rem 0.6rem;
+  border-radius: 0.6rem;
+  outline: 2px solid transparent;
+  color: black;
+  font-size: 1.2rem;
+  border: none;
+  background: rgba(151, 151, 151, 0.123);
+}
+
+.inputsContainer input:focus {
+  outline: 2px solid rgba(151, 151, 151, 0.486);
+}
+
+.storeDataContainer {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* .storeDataContainer div {
+  display: flex;
+  align-items: center;
+} */
+
+.storeDataContainer input {
+  width: auto;
+  font-size: 2rem;
+}
+
+.storeDataContainer label {
+  margin-left: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.submitButton {
+  padding: 1rem 3rem;
+  background: var(--color-bg-variant);
+  border-radius: 0.7rem;
+  border: 1px solid var(--color-variant);
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: white;
+  transition: var(--transition);
+}
+
+.submitButton:hover {
+  background: var(--color-bg-primary);
+}
+
+/* ============Media queries medium devices=============== */
+
+@media screen and (max-width: 1200px) {
+  .inputsContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============Media queries small devices=============== */
+
+@media screen and (max-width: 600px) {
+}

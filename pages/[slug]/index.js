@@ -2,7 +2,13 @@ import { getPosts } from "@/services";
 import React from "react";
 import { getPostDetails } from "@/services";
 import styles from "./post.module.css";
-import { CategoriesWidget, PostDetail, Author, PostWidget } from "@/components";
+import {
+  CategoriesWidget,
+  PostDetail,
+  Author,
+  PostWidget,
+  CommentForm,
+} from "@/components";
 
 const PostDetails = ({ post }) => {
   return (
@@ -10,6 +16,7 @@ const PostDetails = ({ post }) => {
       <div className={styles.post__layout__content}>
         <PostDetail post={post} />
         <Author author={post.author} />
+        <CommentForm />
       </div>
       <div className={styles.post__layout__sidebar}>
         <div className={styles.post__layout__sidebar__container}>
