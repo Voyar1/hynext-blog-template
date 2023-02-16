@@ -8,6 +8,7 @@ import {
   Author,
   PostWidget,
   CommentForm,
+  Comments,
 } from "@/components";
 
 const PostDetails = ({ post }) => {
@@ -16,7 +17,8 @@ const PostDetails = ({ post }) => {
       <div className={styles.post__layout__content}>
         <PostDetail post={post} />
         <Author author={post.author} />
-        <CommentForm />
+        <CommentForm slug={post.slug} />
+        <Comments slug={post.slug} />
       </div>
       <div className={styles.post__layout__sidebar}>
         <div className={styles.post__layout__sidebar__container}>

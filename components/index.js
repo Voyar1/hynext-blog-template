@@ -7,3 +7,4 @@ export { default as Loader } from "./Loader/Loader";
 export { default as PostDetail } from "./PostDetail/PostDetail";
 export { default as Author } from "./Author/Author";
 export { default as CommentForm } from "./CommentForm/CommentForm";
+export { default as Comments } from "./Comments/Comments";

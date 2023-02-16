@@ -65,3 +65,22 @@
 .postLink:hover {
   color: gray;
 }
+
+@media screen and (max-width: 1024px) {
+  .post__detail {
+    padding: 0;
+  }
+  .post__detail__image img {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .content {
+    padding: 2rem;
+  }
+}
+
+/* ============Media queries small devices=============== */
+
+@media screen and (max-width: 600px) {
+}

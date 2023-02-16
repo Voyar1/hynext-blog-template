@@ -1,0 +1,34 @@
+.commentsSection {
+  background: var(--color-white);
+  padding: 2rem 1.4rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.commentsSectionTitle {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.452);
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.commentsValue {
+  color: var(--color-primary);
+}
+
+.comment {
+  background: rgba(151, 151, 151, 0.123);
+  margin: 1rem 0;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+}
+
+.commentInfo {
+  margin-bottom: 1.5rem;
+}
+.commentAuthor {
+  font-weight: bold;
+}
