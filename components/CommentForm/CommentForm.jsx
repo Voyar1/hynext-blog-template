@@ -45,10 +45,15 @@ const CommentForm = ({ slug }) => {
         setIsValid(false);
       }, 3000);
     });
+
+    commentRef.current.value = "";
+    nameRef.current.value = "";
+    emailRef.current.value = "";
+    storeDataRef.current.value = "";
   };
 
   return (
-    <form className={styles.commentForm}>
+    <div className={styles.commentForm}>
       <span className={styles.commentFormTitle}>Leave a comment</span>
       <div className={styles.textareaContainer}>
         <textarea
@@ -100,7 +105,7 @@ const CommentForm = ({ slug }) => {
           Your comment has been submitted for review
         </span>
       </div>
-    </form>
+    </div>
   );
 };
 
