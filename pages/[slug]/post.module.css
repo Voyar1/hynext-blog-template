@@ -24,6 +24,10 @@
   .post__layout {
     grid-template-columns: 1fr;
   }
+
+  .post__layout__sidebar {
+    grid-column: span 8 / span 8;
+  }
 }
 
 /* ============Media queries small devices=============== */
