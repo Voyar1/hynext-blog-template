@@ -2,12 +2,17 @@ import React from "react";
 import moment from "moment";
 import styles from "./featuredpostcard.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const FeaturedPostCard = ({ post }) => (
   <div className={styles.featuredPostCard}>
-    <div
+    <Image
       className={styles.featuredPostCardBg}
-      style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
+      // style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
+      src={post.featuredImage.url}
+      fill
+      // height={200}
+      // width={200}
     />
     <div className={styles.overlay} />
     <div className={styles.postCardInfo}>
