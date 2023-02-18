@@ -3,12 +3,19 @@ import styles from "./postcard.module.css";
 import { BsCalendarDate } from "react-icons/bs";
 import moment from "moment/moment";
 import Link from "next/link";
+import Image from "next/image";
 
 const PostCard = ({ post }) => {
   return (
     <div className={styles.post__card}>
       <div className={styles.post__card__image}>
-        <img src={post.featuredImage.url} alt={post.title} />
+        <Image
+          src={post.featuredImage.url}
+          alt={post.title}
+          width={500}
+          height={500}
+          priority
+        />
       </div>
       <Link href={`/${post.slug}`}>
         <h1 className={styles.post__card__title}>{post.title}</h1>
