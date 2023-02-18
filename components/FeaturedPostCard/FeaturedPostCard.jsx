@@ -11,8 +11,8 @@ const FeaturedPostCard = ({ post }) => (
       // style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
       src={post.featuredImage.url}
       priority
-      width={200}
-      height={200}
+      width={150}
+      height={100}
       alt={post.title}
       // as="image"
       // height={200}

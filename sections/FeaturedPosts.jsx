@@ -84,8 +84,8 @@ const FeaturedPosts = () => {
     <div className={styles.carousel}>
       <Carousel
         infinite
-        customLeftArrow={customLeftArrow}
-        customRightArrow={customRightArrow}
+        // customLeftArrow={customLeftArrow}
+        // customRightArrow={customRightArrow}
         responsive={responsive}
         itemClass={styles.itemClass}
       >
