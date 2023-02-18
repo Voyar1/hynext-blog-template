@@ -10,8 +10,15 @@ import {
   CommentForm,
   Comments,
 } from "@/components";
+import { useRouter } from "next/router";
 
 const PostDetails = ({ post }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader />;
+  }
+
   return (
     <div className={`${styles.post__layout} container`}>
       <div className={styles.post__layout__content}>
