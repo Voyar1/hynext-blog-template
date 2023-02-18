@@ -8,7 +8,7 @@ const Comments = ({ slug }) => {
 
   useEffect(() => {
     getComments(slug).then((result) => setComments(result));
-  }, []);
+  }, [slug]);
 
   if (comments.length === 0) {
     return;

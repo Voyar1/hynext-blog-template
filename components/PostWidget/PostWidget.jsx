@@ -12,7 +12,7 @@ const PostWidget = ({ categories, slug }) => {
     } else {
       getRecentPosts().then((posts) => setRelatedPosts(posts));
     }
-  }, [slug]);
+  }, [slug, categories]);
 
   return (
     <div className={styles.posts__widget}>
