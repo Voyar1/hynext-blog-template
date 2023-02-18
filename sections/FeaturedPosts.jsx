@@ -72,6 +72,10 @@ const FeaturedPosts = () => {
     </div>
   );
 
+  if (!dataLoaded) {
+    return <div className={styles.loader}></div>;
+  }
+
   return (
     <div className={styles.carousel}>
       <Carousel
