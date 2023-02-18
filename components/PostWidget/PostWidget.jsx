@@ -3,6 +3,7 @@ import styles from "./postwidget.module.css";
 import { getRecentPosts, getRelatedPosts } from "@/services";
 import moment from "moment";
 import Link from "next/link";
+import Image from "next/image";
 
 const PostWidget = ({ categories, slug }) => {
   const [relatedPosts, setRelatedPosts] = useState([]);
@@ -27,11 +28,11 @@ const PostWidget = ({ categories, slug }) => {
               key={post.slug}
             >
               <div className={styles.posts__widget__content__image}>
-                <img
+                <Image
                   src={post.featuredImage.url}
                   alt={post.title}
-                  height="60px"
-                  width="60px"
+                  height={60}
+                  width={60}
                 />
               </div>
               <div className={styles.posts__widget__content__info}>
