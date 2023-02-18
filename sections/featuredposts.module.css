@@ -1,0 +1,19 @@
+.leftArrow {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  background: var(--color-primary);
+  border-radius: 0.5rem;
+
+  /* "absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full"> */
+}
+
+.itemClass {
+  padding-right: 1rem;
+}
+
+.carousel {
+  margin-bottom: 2rem;
+}

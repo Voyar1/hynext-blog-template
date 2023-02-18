@@ -3,6 +3,7 @@ import styles from "./index.module.css";
 import { PostCard, PostWidget, CategoriesWidget } from "@/components";
 import moment from "moment";
 import { getPosts } from "@/services";
+import FeaturedPosts from "@/sections/FeaturedPosts";
 
 export default function Home({ posts }) {
   return (
@@ -13,16 +14,19 @@ export default function Home({ posts }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={`${styles.main__layout} container`}>
-        <div className={styles.main__layout__posts}>
-          {posts.map((post) => {
-            return <PostCard post={post} key={post.slug} />;
-          })}
-        </div>
-        <div className={styles.main__layout__sidebar}>
-          <div className={styles.main__layout__sidebar__container}>
-            <PostWidget />
-            <CategoriesWidget />
+      <div className="container">
+        <FeaturedPosts />
+        <div className={styles.main__layout}>
+          <div className={styles.main__layout__posts}>
+            {posts.map((post) => {
+              return <PostCard post={post} key={post.slug} />;
+            })}
+          </div>
+          <div className={styles.main__layout__sidebar}>
+            <div className={styles.main__layout__sidebar__container}>
+              <PostWidget />
+              <CategoriesWidget />
+            </div>
           </div>
         </div>
       </div>

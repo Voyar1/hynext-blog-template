@@ -1,0 +1,27 @@
+.footer {
+  margin-top: 2rem;
+  background: #373b44;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.footer > p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footerInfoTitle {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.footerInfo span {
+  display: block;
+  margin-bottom: 1rem;
+}
