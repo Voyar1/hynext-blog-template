@@ -3,7 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "./featuredposts.module.css";
 
-import { FeaturedPostCard } from "../components";
+import { FeaturedPostCard, Loader } from "../components";
 import { getFeaturedPosts } from "../services";
 
 const responsive = {
@@ -73,7 +73,11 @@ const FeaturedPosts = () => {
   );
 
   if (!dataLoaded) {
-    return <div className={styles.loader}></div>;
+    return (
+      <div className={styles.loader}>
+        <Loader />
+      </div>
+    );
   }
 
   return (

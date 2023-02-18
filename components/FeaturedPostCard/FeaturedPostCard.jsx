@@ -10,8 +10,11 @@ const FeaturedPostCard = ({ post }) => (
       className={styles.featuredPostCardBg}
       // style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
       src={post.featuredImage.url}
-      fill
-      priority
+      // priority
+      width={200}
+      height={200}
+      alt={post.title}
+      // as="image"
       // height={200}
       // width={200}
     />
