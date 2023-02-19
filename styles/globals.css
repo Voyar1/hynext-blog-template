@@ -41,8 +41,9 @@ body {
 
 body {
   color: var(--color-white);
-  font-family: "Poppins", sans-serif;
   font-display: swap;
+
+  font-family: "Poppins", sans-serif;
   outline: 0;
   list-style: none;
   text-decoration: none;
