@@ -21,6 +21,7 @@ body {
     #4286f4,
     #373b44
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-display: swap;
 }
 
 :root {
@@ -41,8 +42,6 @@ body {
 
 body {
   color: var(--color-white);
-  font-display: swap;
-
   font-family: "Poppins", sans-serif;
   outline: 0;
   list-style: none;
