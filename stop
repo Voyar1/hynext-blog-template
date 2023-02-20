@@ -1,0 +1,35 @@
+[33ma784b1a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m added title section in categories and posts
+[33m60b906d[m bug fixing
+[33mb309188[m Font preload
+[33mf9b6ac2[m font-display
+[33mc812b2f[m fonts improvment
+[33mf1f4f13[m font display
+[33m812033c[m PSI WORK
+[33mcfb2339[m PSI WORK
+[33mcdd2e97[m PSI work
+[33m26383fc[m PSI work
+[33m269c6ab[m PSI on featuredPostCard
+[33mdea197e[m improving images in featuredPosts
+[33mfe59016[m added loader to homepage
+[33m7e57724[m improving images optymalization
+[33mfb6135d[m improving PSI by adding Image from Next.js
+[33m3f41e59[m fixing loader bug
+[33m4db316a[m fallback handling
+[33m1486ec4[m fixing key prop on list
+[33maabd12d[m fixing dependencies in useEffect
+[33m092d6f0[m added footer and featuredPosts component
+[33ma1ab720[m fixing responsive desing of PostWidget and CategoriesWidget
+[33mc13efd2[m added getComments function, and displaying comments functionality in Comments component
+[33mc53aa52[m added comments component, adding comment functionality, displying data on commentsForm
+[33m2524b74[m added CommentForm component
+[33ma867414[m added Related Posts logic to PostWidget
+[33m5b1c3af[m added Author component
+[33m46176b4[m styling PostDetail component and improving functionality of adding links to posts
+[33m513f4ab[m added PostDetail component and PostDetails page
+[33m1a546a8[m added category page and loader component
+[33m11f548a[m added PostWidget and and CategoriesWidget added new functions in servies to fetch data
+[33m67d2d60[m Added PostWidget component
+[33me70cebc[m added PostCard component ui and CategoriesWidget UI
+[33mef57797[m fixed bug with mapping list
+[33m8c3ec71[m initial commit
+[33m6e9561b[m Initial commit from Create Next App
