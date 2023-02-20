@@ -19,18 +19,20 @@ const Comments = ({ slug }) => {
       <span className={styles.commentsSectionTitle}>Comments</span>
       <div className={styles.comments}>
         <span className={styles.commentsValue}>{comments.length} Comments</span>
-        {comments.map((comment) => {
-          return (
-            <div className={styles.comment} key={comment.createdAt}>
-              <p className={styles.commentInfo}>
-                <span className={styles.commentAuthor}>{comment.name}</span> on{" "}
-                {moment(comment.date).format("MMM Do YYYY")}
-              </p>
-              <p>{comment.comment}</p>
-              <p></p>
-            </div>
-          );
-        })}
+        {comments
+          .map((comment) => {
+            return (
+              <div className={styles.comment} key={comment.createdAt}>
+                <p className={styles.commentInfo}>
+                  <span className={styles.commentAuthor}>{comment.name}</span>{" "}
+                  on {moment(comment.createdAt).format("MMM Do YYYY")}
+                </p>
+                <p>{comment.comment}</p>
+                <p></p>
+              </div>
+            );
+          })
+          .reverse()}
       </div>
     </div>
   );
