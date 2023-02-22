@@ -53,8 +53,25 @@
 @media screen and (max-width: 900px) {
   .header {
     width: 100%;
+    height: 5rem;
     margin: 0 auto;
-    padding: 1rem 1rem;
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1011111;
+    background: #4286f4;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .header__container {
+    border: none;
+    padding: 0;
+  }
+
+  .header__logo__item {
+    font-size: 2rem;
   }
 
   .navigation {
