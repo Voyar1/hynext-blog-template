@@ -24,6 +24,9 @@
   .categories__layout {
     grid-template-columns: 1fr;
   }
+  .categories__layout__sidebar {
+    grid-column: span 8 / span 8;
+  }
 }
 
 /* ============Media queries small devices=============== */
