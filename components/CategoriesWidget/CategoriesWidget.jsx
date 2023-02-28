@@ -11,16 +11,16 @@ const CategoriesWidget = () => {
   }, []);
 
   return (
-    <div className={styles.categories__widget}>
-      <div className={styles.categories__widget__title}>
+    <div className={styles.categoriesWidget}>
+      <div className={styles.categoriesWidgetTitle}>
         <span>Categories</span>
       </div>
-      <div className={styles.categories__widget__content}>
+      <div className={styles.categoriesWidgetContent}>
         {categories.map((category) => {
           return (
             <Link
               href={`/category/${category.slug}`}
-              className={styles.content__title}
+              className={styles.contentTitle}
               key={category.slug}
             >
               <span>{category.name}</span>
